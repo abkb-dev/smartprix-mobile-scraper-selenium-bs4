@@ -20,7 +20,7 @@ import time # time module is needed to add delay while we're requesting webpage
 # >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 # (3) create service object by passing path of your driver exe file
-s = Service("C:/Users/Adnan khalid/OneDrive/Documents/WebScraping Series/chromedriver-win64/chromedriver.exe")
+s = Service("C:/Path/To/chromedriver-win64/chromedriver.exe")
 
 # (4) # To open a Chrome browser write below code and pass driver as a service
 driver = webdriver.Chrome(service=s)
@@ -29,8 +29,7 @@ driver = webdriver.Chrome(service=s)
 # But Why the browser opens only for 1 second ❓
 # Your Python script finishes execution immediately.
 # When the script ends:
-# The driver object is destroyed
-# Chrome automatically closes
+# The driver object is destroyed & Chrome automatically closes
 # So Chrome is not crashing — Python is just exiting.
 # SOLUTION: ADD _exit = input("Press Enter To Close the Browser!!!") THIS AT THE END OF CODE
 
@@ -88,4 +87,5 @@ with open("smartprix.html",'w',encoding ='utf-8') as fp:
 _exit = input("Press Enter To Close the Browser!!!")
 
 # (AS OF NOW WE HAVE FULL PRODUCTS ON WEB PAGE, NOW WE CAN USE BeautifulSoup To parse and get the data)
+
 # For that Pls refer "smartprix_to_dataframe.ipynb" file
